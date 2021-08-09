@@ -1,0 +1,35 @@
+{"ingredients":
+    {
+        "proteins": [
+            "carne guisada",
+            "scrambled eggs",
+            "bacon",
+            "ham",
+            "Spam",
+            "chicharrones",
+            "tripas",
+            "mollejas",
+            "sausage",
+            "chorizo",
+            "carne asada",
+            "fajitas",
+            "fried eggs"
+        ],
+        "veggies": [
+            "potatoes",
+            "nopalitos",
+            "fresh onions",
+            "grilled onions",
+            "fresh tomatoes",
+            "pico de gallo",
+            "fresh jalapenos",
+            "grilled jalapenon",
+            "cilantro"
+        ],
+        "dairy": [
+            "cheddar cheese",
+            "monterrey jack cheese",
+            "sour cream"
+        ]
+    }
+}
