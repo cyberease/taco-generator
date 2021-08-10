@@ -3,3 +3,8 @@
 <h2>Number of Proteins {{no_proteins}}</h2>
 <h2>Number of Veggies {{no_veggies}}</h2>
 <h2>Number of Dairy Items {{no_dairy_items}}</h2>
+<br>
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
