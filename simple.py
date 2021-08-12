@@ -1,31 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, redirect
+#from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 import os
 import random
-#appPath = '/home/knelson/Documents/Projects/cyberease/taco/'
-appPath = os.getcwd()
-app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return render_template('home.html')
-@app.route('/your-taco', methods=['GET', 'POST'])
-
-def your_taco():
-    if request.method == 'POST':
-        data = request.form
-        proteins = data['proteins']
-        veggies = data['veggies']
-        dairy = data['dairy']
-        if int(proteins) + int(veggies) + int(dairy) > 0:
-            df = pd.DataFrame()
-            df = getIngredients(df, int(proteins), int(veggies), int(dairy))
-            return render_template('your-taco.html', no_proteins=proteins, no_veggies=veggies, no_dairy_items=dairy, tables=[df.to_html(classes='data')], titles=df.columns.values)
-        else:
-            return redirect(url_for('home'))
-    else:
-        return redirect(url_for('home'))
-def getIngredients(dfIn, proteins, veggies, dairy):
+print(pd.show_versions)
+wDir = '/home/knelson/Documents/Projects/cyberease/taco/'
+os.chdir(wDir)
+def your_taco(dfIn, proteins, veggies, dairy):
     if dfIn.size == 0:
         dfIngredient = pd.DataFrame(['temp'])
     else:
@@ -104,8 +85,8 @@ def getIngredients(dfIn, proteins, veggies, dairy):
                     i = i + 1 
                 else:
                     i = i   
-        return dfIngredient
-    else:
-        return redirect(url_for('home'))
+    return dfIngredient         
+df = pd.DataFrame()
+df = your_taco(df,2,4,3)
+print(df)
 
-            

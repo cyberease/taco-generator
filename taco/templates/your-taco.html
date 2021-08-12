@@ -1,9 +1,11 @@
-<h1>Your Taco Ingredients</h1>
+<h2>Your Taco Ingredients</h2>
 
-<h2>Number of Proteins {{no_proteins}}</h2>
-<h2>Number of Veggies {{no_veggies}}</h2>
-<h2>Number of Dairy Items {{no_dairy_items}}</h2>
+<h3>Number of Proteins {{no_proteins}}</h3>
+<h3>Number of Veggies {{no_veggies}}</h3>
+<h3>Number of Dairy Items {{no_dairy_items}}</h3>
 <br>
+
+
 {% for table in tables %}
             {{titles[loop.index]}}
             {{ table|safe }}

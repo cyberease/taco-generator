@@ -1,28 +1,42 @@
-<h1>Taco Generator</h1>
 
+<h2>Taco Generator</h2>
 <form action="your-taco" method="Post">
-    <label for="proteins">Number of Proteins</label>
-    <br>
-    <select name='proteins'>
-        <option value=0>0 protein</option>
-        <option value=1>1 protein</option>
-        <option value=2>2 proteins</option>
-        <option value=3>3 proteins</option>
-        <option value=4>4 proteins</option>
-    </select>
-    <select name='veggies'>
-        <option value=0>0 veggie</option>
-        <option value=1>1 veggie</option>
-        <option value=2>2 veggies</option>
-        <option value=3>3 veggies</option>
-        <option value=4>4 veggies</option>
-    </select>
-    <select name='dairy'>
-        <option value=0>0 dairy item</option>
-        <option value=1>1 dairy items</option>
-        <option value=2>2 dairy items</option>
-        <option value=3>3 dairy items</option>
-    </select>
+    <table style="width:100%">
+        <tr>
+            <th>Number of Proteins</th>
+            <th>Number of Vegetables</th>
+            <th>Number of Dairy Items</th>
+        </tr>
+        <tr>
+            <td class = "select">
+                <select name='proteins'>
+                    <option value=0>0 protein</option>
+                    <option value=1>1 protein</option>
+                    <option value=2>2 proteins</option>
+                    <option value=3>3 proteins</option>
+                    <option value=4>4 proteins</option>
+                </select>
+            </td>
+            <td class = "select">
+                <select name='veggies'>
+                    <option value=0>0 veggie</option>
+                    <option value=1>1 veggie</option>
+                    <option value=2>2 veggies</option>
+                    <option value=3>3 veggies</option>
+                    <option value=4>4 veggies</option>
+                </select>
+            </td>
+            <td class = "select">
+                <select name='dairy'>
+                    <option value=0>0 dairy item</option>
+                    <option value=1>1 dairy items</option>
+                    <option value=2>2 dairy items</option>
+                    <option value=3>3 dairy items</option>
+                </select>
+            </td>
+        </tr>
+    </table>
     <br><br>
     <input type="submit" value="Get Ingredients">
 </form>
+
